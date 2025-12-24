@@ -1,0 +1,7 @@
+from django.urls import path,re_path
+from . import views
+
+urlpatterns = [
+    path('test/<int:id>/', views.home, name= "test0"),
+     path('/test1', views.about, name="test1")
+]

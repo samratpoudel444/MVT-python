@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates #2</title>
+</head>
+<body>
+    <h1>Fillters</h1>
+    <p>Title(Uppercase): {{post.title | upper}}</p>
+    <p>Description(lower):{{post.description | lower}}</p>
+    <p>Description(titleCase):{{post.description | title}}</p>
+    <p>Description(Line Break):{{post.description | linebreaks}}</p>
+    <p>Description(truncate):{{post.description | truncatechars:20}}</p>
+    <p>post(capital): {{post.author | capfirst }}</p>
+    <p>created At: {{post.created_at}}</p>
+    <p>comment_count: {{post.comment_count}}</p>
+    <p>tags: {{post.tags}}</p>
+
+    <hr>
+
+    <h1>Number Filters</h1>
+    <p>Price Original: {{post.price}}</p>
+    <p>Price Original(+10): {{post.price | add:5}}</p>
+    <p>division:</p> 
+    {%if post.number | divisbileby:2%}
+    <>
+    {%else%}
+        {%endif%}
+    <p></p>
+
+</body>
+</html>
